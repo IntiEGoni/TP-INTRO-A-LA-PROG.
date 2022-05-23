@@ -1,16 +1,15 @@
 def lectura(archivo, salida):
-    for elem in archivo:
-        salida.append(elem)
-        return salida
-        ##salida.append("hola")
+    lemario=open("lemario.txt","r") 
+    salida=[]
+    for elem in lemario:
+        salida.append(elem[:-1])
         ##La función lectura(archivo, salida) lee el archivo y lo carga en la lista salida, no hace falta que
         ##devuelva una lista sino que lo carga en la lista que recibe como segundo parámetro
 
 
 def nuevaPalabra(lista):
-    azar=random.randint(lista)        
-    for palabra in lista:
-        lista.append(azar)    
-        return lista[0]
+    import random
+    azar=random.choice(lista)
+    return azar
         ##La función nuevaPalabra(lista)) debe recibir una lista de palabras y devuelve 
         ##una de ellas elegida al azar.
