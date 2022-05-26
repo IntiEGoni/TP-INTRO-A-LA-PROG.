@@ -22,10 +22,18 @@ def silabasTOpalabra(silaba):
     pass
 
 def palabraTOsilaba(palabra):
-    pass
+    palabraSilabas=separador(palabra)
+    return palabraSilabas
 
 def esCorrecta(palabraEnSilabasEnPantalla, palabra):
-    return True
+    palabraNueva = ""
+    for letra in palabra:
+        if letra == " ":
+            palabraNueva=palabraNueva+"-"
+        else:
+            palabraNueva=palabraNueva+letra
+    if palabraEnSilabasEnPantalla == palabraNueva:
+        return esCorrecta
 
 def puntaje(palabra):
     return 5
